@@ -74,15 +74,25 @@
             <label for="arrival-date">Дата заезда: </label>
             <div class="date">
               <input type="text" name="arrival-date" id="arrival-date" value="24 апреля 2017">
-              <button><img src="img/calendar.svg" alt="Выбрать дату заезда"></button>
-            </div>
+              <button class="calendar"><img src="img/calendar.svg" alt="Выбрать дату заезда"></button>
+            </div><br>
             <label for="departure-date">Дата выезда: </label>
             <div class="date">
               <input type="text" name="departure-date" id="departure-date" value="4 июля 2017">
-              <button><img src="img/calendar.svg" alt="Выбрать дату выезда"></button>
+              <button class="calendar"><img src="img/calendar.svg" alt="Выбрать дату выезда"></button>
+            </div><br>
+            <label for="adults-amount">Взрослые:</label>
+            <div>
+              <button class="minus"></button>
+              <input type="number" name="adults-amount" id="adults-amount" min="0" value="2">
+              <button class="plus"></button>
             </div>
-            <label>Взрослые: <input type="number" name="adults-amount" min="0" value="2"></label>
-            <label>Дети: <input type="number" name="children-amount" min="0" value="0"></label><br>
+            <label for="children-amount">Дети:</label>
+            <div>
+              <button class="minus"></button>
+              <input type="number" name="children-amount" id="children-amount" min="0" value="0">
+              <button class="plus"></button>
+            </div><br>
             <input type="submit" value="Найти">
           </fieldset>
         </form>

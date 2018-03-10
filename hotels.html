@@ -20,8 +20,36 @@
     </header>
     <main class="hotels-container">
       <section class="filter">
-        <h2 class="visually-hidden">Форма поиска</h2>
-        <!-- Это же формы? Их пока не делаем? -->      
+        <h2 class="visually-hidden">Форма поиска жилья в Седоне</h2>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="infrastructure">
+          <legend>Инфраструктура:</legend>
+            <ul>
+              <li><label><input type="checkbox" name="pool" checked>Бассейн</label></li>
+              <li><label><input type="checkbox" name="parking">Парковка</label></li>
+              <li><label><input type="checkbox" name="wi-fi">Wi-fi</label></li>
+            </ul>
+          </fieldset>
+          <fieldset class="type-of-accommodation">
+          <legend>Тип жилья:</legend>
+            <ul>
+              <li><label><input type="checkbox" name="hotel" checked>Гостиница</label></li>
+              <li><label><input type="checkbox" name="motel" checked>Мотель</label></li>
+              <li><label><input type="checkbox" name="apartments" checked>Апартаменты</label></li>
+            </ul>
+          </fieldset>
+          <fieldset class="cost-per-day">
+            <legend>Стоимость в сутки (Р): </legend>
+              <label for="start-price" class="visually-hidden">Минимальная цена</label>
+              <input type="text" name="start-price" id="start-price" value="От 0">
+              <label for="final-price" class="visually-hidden">Максимальная цена</label>
+              <input type="text" name="final-price" id="final-price" value="До 3000"><br>
+              <label for="prices" class="visually-hidden">Диапазон цен</label>
+              <input type="range" name="prices" min="0">
+          </fieldset><br>
+          <label for="search-results" class="visually-hidden">Показать варианты </label>
+          <input type="submit" id="search-results" value="Показать">
+        </form>
       </section>
       <section class="results">
         <h2 class="visually-hidden">Результаты поиска</h2>
