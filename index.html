@@ -9,7 +9,6 @@
   </head>
   <body>
     <header class="header">
-      <div class="background-picture"></div>
       <a class="main-header-logo">
         <img src="img/logo_sedona.png" width="138" height="65" alt="Лого Седоны">
       </a>
@@ -24,6 +23,7 @@
     </header>
     <main class="container">
       <h1 class="visually-hidden">Седона крутая</h1>
+      <div class="background-picture"></div>
         <p class="another-size-a">Седона - небольшой городок в Аризоне,<br>заслуживающий большего!</p>
         <p class="another-size-b">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
           <section class="adv">
@@ -205,16 +205,34 @@
               </button>
             </div><br>
             <div class="amount">
-            <label for="adults-amount">Взрослые:</label>
-              <button class="minus"></button>
+              <label for="adults-amount">Взрослые:</label>
+              <button class="minus">
+                <svg width="11" height="11">
+                  <line x1="0" y1="5.5" x2="11" y2="5.5" stroke="#a9a9a9" stroke-width="3" />
+                </svg>
+              </button>
               <input type="text" name="adults-amount" id="adults-amount" value="2">
-              <button class="plus"></button>
+              <button class="plus">
+                <svg width="11" height="11">
+                  <line x1="0" y1="5.5" x2="11" y2="5.5" stroke="#a9a9a9" stroke-width="3" />
+                  <line x1="5.5" y1="0" x2="5.5" y2="11" stroke="#a9a9a9" stroke-width="3" />
+                </svg>
+              </button>
             </div>
             <div class="amount">
             <label for="children-amount">Дети:</label>
-              <button class="minus"></button>
+              <button class="minus">
+                <svg width="11" height="11">
+                  <line x1="0" y1="5.5" x2="11" y2="5.5" stroke="#a9a9a9" stroke-width="3" />
+                </svg>
+              </button>
               <input type="text" name="children-amount" id="children-amount" value="0">
-              <button class="plus"></button>
+              <button class="plus">
+               <svg width="11" height="11">
+                <line x1="0" y1="5.5" x2="11" y2="5.5" stroke="#a9a9a9" stroke-width="3" />
+                <line x1="5.5" y1="0" x2="5.5" y2="11" stroke="#a9a9a9" stroke-width="3" />
+               </svg> 
+              </button>
             </div><br>
             <input type="submit" value="Найти">
           </fieldset>
