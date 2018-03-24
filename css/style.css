@@ -31,6 +31,7 @@ a {
 .main-navigation {
   line-height: 1.86;
   font-weight: bold;
+  position: relative;
 }
 
 .site-navigation {
@@ -105,13 +106,13 @@ a.active {
   font-weight: bold;
   color: #000000;
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 27px;
 }
 
 .another-size-b {
   line-height: 26px;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 51px;
 } 
 
 .another-size-c {
@@ -139,8 +140,21 @@ a.active {
   margin-bottom: 56px;
 }
 
+.adv-item-first {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 46px;
+  padding-bottom: 61px;
+}
+
 .adv-item-second {
   order: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 43px;
+  padding-bottom: 62px;
 }
 
 
@@ -159,18 +173,24 @@ a.active {
 
 ul.features {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  margin-bottom: 63px;
+  margin-bottom: 70px;
   padding: 0;
+}
+
+.features svg {
+  height: 76px;
 }
 
 .feature-item:first-of-type {
   margin-left: 73px;
+  margin-right: auto;
 }
 
 .feature-item:last-of-type {
   margin-right: 63px;
+  margin-left: auto;
 }
 
 
@@ -185,15 +205,46 @@ ul.features {
 .adv-item {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  justify-content:center;
+  align-items: center; 
+  
+  padding-top: 30px;
+  padding-bottom: 64px;
+}
+
+.adv-items .number,
+.adv-item-first .number,
+.adv-item-second .number {
+  margin-bottom: 20px;
+}
+
+.adv-items p,
+.adv-item-first p,
+.adv-item-second p {
+  margin: 0;
+}
+
+.adv-item-second h3 {
+  font-size: 21px;
+  line-height: 1;
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+.adv-item-first h3 {
+  font-size: 21px;
+  line-height: 1;
+  margin: 0;
+  margin-bottom: 24px;
 }
 
 .adv-item h3,
 .feature-item h3 {
   font-size: 21px;
+  line-height: 1;
   font-weight: bold;
   color: #000000;
+  margin-bottom: 24px;
 }
 
 .adv-item-first,
@@ -277,11 +328,20 @@ button.search:active {
   text-transform: uppercase;
 }
 
+
 .date input[type="text"] {
   width: 324px;
   height: 38px;
   border-style: none;
   padding: 0 9px 0 13px;
+}
+
+div.date:first-of-type {
+  margin-bottom: 29px; 
+}
+
+div.date:nth-of-type(2) {
+  margin-bottom: 30px; 
 }
 
 .amount input[type="text"] {
@@ -294,7 +354,21 @@ button.search:active {
 }
 
 .amount {
-  display: inline;
+  display: flex;
+  align-items: baseline;
+}
+
+.amount-block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.adults label {
+  margin-right: 41px;
+}
+
+.children label {
+  margin-right: 27px;
 }
 
 .date {
@@ -326,14 +400,6 @@ button.minus {
   border-style: none;
 }
 
-button.plus {
-  margin-left: -4px;
-}
-
-button.minus {
-  margin-right: -4px;
-}
-
 .short-search input[type="text"]:hover {
   background-color: #ebebeb;
 }
@@ -363,6 +429,7 @@ button.minus {
   color: #94b9d2;
 }
 
+
 /*Форма закончилась*/
 
 
@@ -384,11 +451,12 @@ button.minus {
 
 .footer {
   display: flex;
-  width: 967px;
+  width: 100%;
+  box-sizing: border-box;
   justify-content: space-between;
   align-items: baseline;
-  position: absolute;
-    padding-top: 36px;
+  position: relative;
+  padding-top: 36px;
   padding-left: 132px;
   padding-right: 101px;
   padding-bottom: 36px;
@@ -401,11 +469,14 @@ button.minus {
   line-height: 1.24;
   color: #000000;
   font-weight: bold;
+  
 }
 
 .footer-social {
   display: flex;
   justify-content: center;
+  margin: auto;
+  margin-left: 256px;
 }
 
 a.social-button {
@@ -418,6 +489,18 @@ a.social-button {
   width: 46px;
   height: 48px;
   background-color: #81b3d2; 
+}
+
+.social-button:hover {
+  background-color: #669ec0; 
+}
+
+.social-button:active {
+  background-color: #5496bd;
+}
+
+.social-button:active path {
+  fill: #88b6d1; 
 }
 
 a.social-button:nth-of-type(2) {
@@ -440,6 +523,8 @@ a.logo-academy {
   height: 41px;
   margin-left: 8px;
 }
+
+
 
 
 /*ФУТЕР             */
@@ -764,6 +849,51 @@ ul.sorting a:active {
 .list-up {
   margin-right: 12px;
 }
+
+/*Правки после проверки */
+
+
+button.calendar svg {
+  fill: #cacaca;
+}
+
+button.calendar:hover svg {
+  fill: #000000;
+}
+
+button.calendar:active svg {
+  fill: #81b3d2;
+}
+
+button.plus svg,
+button.minus svg {
+  stroke: #a9a9a9;
+  stroke-width: 3px;
+}
+
+button.plus:hover svg,
+button.minus:hover svg {
+  stroke: #000000;
+}
+
+button.plus:active svg,
+button.minus:active svg {
+  stroke: #81b3d2;
+}
+
+a.logo-academy path {
+  fill: #231f20;
+}
+
+a.logo-academy:hover path {
+  fill: #81b3d2;
+}
+
+a.logo-academy:active path {
+  fill: #bdbbbc;
+}
+
+
 
 
 
