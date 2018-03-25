@@ -51,74 +51,73 @@
             </p>
           </fieldset>
           <div class="last-block">
-          <fieldset class="cost-per-day">
-            <div class="last-block-box">
-            <legend>Стоимость в сутки (Р): </legend>
-              <label for="start-price" class="visually-hidden">Минимальная цена</label>
-              <input type="text" name="start-price" id="start-price" value="От 0">
-              <label for="final-price" class="visually-hidden">Максимальная цена</label>
-              <input type="text" name="final-price" id="final-price" value="До 3000" class="final-price">
-            </div>
+            <fieldset class="cost-per-day">
+              <div class="last-block-box">
+              <legend>Стоимость в сутки (Р): </legend>
+                <label for="start-price" class="visually-hidden">Минимальная цена</label>
+                <input type="text" name="start-price" id="start-price" value="От 0">
+                <label for="final-price" class="visually-hidden">Максимальная цена</label>
+                <input type="text" name="final-price" id="final-price" value="До 3000" class="final-price">
+              </div>
               <label for="prices" class="visually-hidden">Диапазон цен</label>
-            <div class="filter-buttons">
-              <div class="filter-button">
-                <img src="img/filter_button.svg" width="20" height="22">
+              <div class="filter-buttons">
+                <div class="filter-button">
+                  <img src="img/filter_button.svg" width="20" height="22">
+                </div>
+                <div class="filter-line">
+                  <svg  width="232" height="22" >
+                    <line x1="0" y1="10" x2="232" y2="10" />
+                  </svg>
+                </div>
+                <div class="filter-button">
+                  <img src="img/filter_button.svg" width="20" height="22">
+                </div>
+                <div class="after-filter-line">
+                  <svg  width="45" height="22">
+                    <line x1="0" y1="10" x2="45" y2="10" />
+                  </svg>
+                </div>
               </div>
-              <div class="filter-line">
-                <svg  width="232" height="22" >
-                  <line x1="0" y1="10" x2="232" y2="10" />
-                </svg>
-              </div>
-              <div class="filter-button">
-                <img src="img/filter_button.svg" width="20" height="22">
-              </div>
-              <div class="after-filter-line">
-                <svg  width="45" height="22">
-                  <line x1="0" y1="10" x2="45" y2="10" />
-                </svg>
-              </div>
-            </div>
-          </fieldset>
-          <label for="search-results" class="visually-hidden">Показать варианты </label>
-          <input type="submit" id="search-results" value="Показать">
+            </fieldset>
+            <label for="search-results" class="visually-hidden">Показать варианты </label>
+            <input type="submit" id="search-results" value="Показать">
           </div>
         </form>
       </section>
       <div class="container-results">
       <section class="results">
         <h2 class="visually-hidden">Результаты поиска</h2>
-        <div class="small-box">
-          <p class="quantity-result">Найдено: 3</p>
-          <p class="sorting-options">Сортировка:</p>
-        </div>
+        <p class="quantity-result">Найдено: 3</p>
         <div class="sorting-box">
+          <p class="sorting-options">Сортировка:</p>
           <ul class="sorting">
             <li><a href="#" class="active-sorting">По цене</a></li>
             <li><a href="#">По типу</a></li>
             <li><a href="#">По рейтингу</a></li>
           </ul>
-          <div cluss="buttons">
+        </div>
+        <div class="buttons">
             <button class="list-up">
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="11px" height="10px" viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
               <polygon fill="#231F20" points="5.5,0 0,10 11,10 "/>
               </svg>
             </button>
-            <button class="list-down">
+            <button class="list-down active-btn">
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="11px" height="10px" viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
               <polyline fill="#231F20" points="5.5,10 0,0 11,0 "/>
               </svg>
             </button>
-          </div>
         </div>
+        
       </section>
       <section class="hotels">
         <h2 class="visually-hidden">Список выбранных отелей</h2>
-        <section class="amara">
+        <section class="hotel">
           <h3 class="visually-hidden">Первый отель</h3>
           <img src="img/amara_resort.jpg" width="135" height="90" alt="amara resort and spa" class="hotel-photo">
-          <div class="amara-info">
+          <div class="hotel-info">
             <div class="name-and-star">
               <a href="#" class="hotel-names">Amara resort &amp; spa</a>
               <div class="hotel-star">
@@ -136,10 +135,10 @@
             </div>
           </div>
         </section>
-        <section class="desert">
+        <section class="hotel">
           <h3 class="visually-hidden">Второй отель</h3>
-          <img src="img/desert_quail.jpg" width="135" height="90" alt="desert quail inn">
-          <div class="desert-info">
+          <img src="img/desert_quail.jpg" width="135" height="90" alt="desert quail inn" class="hotel-photo">
+          <div class="hotel-info">
             <div class="name-and-star">
               <a href="#" class="hotel-names">Desert Quail Inn</a>
               <div class="hotel-star">
@@ -157,10 +156,10 @@
             </div>
           </div>
         </section>
-        <section class="villas">
+        <section class="hotel">
           <h3 class="visually-hidden">Третий отель</h3>
-          <img src="img/poco_diablo.jpg" width="135" height="90" alt="villas at poco diablo">
-          <div class="villas-info">
+          <img src="img/poco_diablo.jpg" width="135" height="90" alt="villas at poco diablo" class="hotel-photo">
+          <div class="hotel-info">
             <div class="name-and-star">
               <a href="#" class="hotel-names">Villas at Poco Diablo</a>
               <div class="hotel-star">

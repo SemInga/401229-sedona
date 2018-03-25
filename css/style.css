@@ -81,8 +81,9 @@ a.active {
 .main-header-logo {
   position: absolute;
   left: 50%;
-  margin-left: -69px;
+  transform: translateX(-50%);
   top: -14px;
+  z-index: 1;
 }
 /*HEADER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
@@ -562,6 +563,21 @@ form.normal-search {
 
 .normal-search {
   display: flex;
+  justify-content: flex-start;
+}
+
+.infrastructure,
+.type-of-accommodation {
+  display: flex;
+  flex-direction: column;
+  padding: 0; 
+  margin: 0;
+}
+
+.last-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .normal-search legend {
@@ -605,20 +621,6 @@ p.accommodation-box {
   position: relative;
 }
 
-.infrastructure,
-.type-of-accommodation {
-  display: flex;
-  padding: 0; 
-  margin: 0;
-}
-
-.last-block {
-  display: flex;
-  flex-direction: column;
-  justify-content:space-between;
-  width: 328px;
-}
-
 .cost-per-day {
   padding-left: 0;
   padding-right: 0;
@@ -635,10 +637,13 @@ p.accommodation-box {
   border: 2px solid #ffffff;  
 }
 
-
-
 .infrastructure {
-  width: 241px; 
+  margin-right: 101px;
+}
+
+.type-of-accommodation {
+  margin-right: auto;
+  padding-left: 15px;
 }
 
 .infrastructure-checkbox,
@@ -662,16 +667,9 @@ p.accommodation-box {
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.type-of-accommodation {
-  width: 273px;
-  margin-right: auto;
-  padding-left: 15px;
-}
-
 .filter-buttons {
   display: flex;
   justify-content: center;
-  width: 317px;
 }
 
 .filter-line line {
@@ -695,8 +693,11 @@ p.accommodation-box {
   margin: 0 73px;
 }
 
+/*Первая строка                */
+
 .results {
   display: flex;
+  align-items: baseline;
 }
 
 .quantity-result {
@@ -704,47 +705,40 @@ p.accommodation-box {
   line-height: 1.24;
   font-weight: bold;
   color: #000000;
+  margin: 0;
+  margin-right: 48px;
+}
+
+.sorting-box {
+  display: flex;
+  justify-content: space-between;
 }
 
 .sorting-options {
   font-size: 12px;
   line-height: 1.5;
   color: #000000;
+  margin: 0;
+  margin-right: 40px;
 }
 
+/*Список параметров сортировки*/
+
 ul.sorting {
+  display: flex;
+  justify-content: space-between;
   list-style: none;
+  margin: 0;
   padding: 0;
   font-size: 12px;
   line-height: 1.5;
 }
 
-.small-box {
-  display: flex;
-  width: 241px;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.sorting-box {
-  display: flex;
-  width: 816px;
-  justify-content: space-between;
-  align-items: center;
-}
-
-ul.sorting {
-  display: flex;
-  width: 288px;
-  justify-content: space-between;
-}
-
 ul.sorting li:first-of-type {
-  padding-left: 40px;
+  padding-right: 34px;
 }
 
 ul.sorting li:nth-of-type(2) {
-  padding-left: 34px;
   padding-right: 34px;
 }
 
@@ -776,6 +770,73 @@ ul.sorting a:active {
   border: none;
 }
 
+/*Список параметров сортировки*/
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+}
+
+.list-up,
+.list-down {
+  border-style: none;
+  background-color: #fefefe;
+  padding: 0;
+}
+
+.list-up {
+  margin-right: 12px;
+}
+
+.list-down.active-btn polyline {
+  fill: #81b3d2;
+}
+
+.list-up polygon,
+.list-down polyline {
+  fill: #cacaca;
+}
+
+.list-up polygon:hover,
+.list-down polyline:hover {
+  fill: #231f20;
+}
+
+.list-up polygon:active,
+.list-down polyline:active {
+  fill: #81b3d2;
+}
+
+/*Первая строка                */
+
+
+.hotels {
+  display: flex;
+  flex-direction: column;
+}
+
+.hotel {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.hotel-photo {
+  margin-right: 30px;
+}
+
+.hotel-info {
+  display: flex; 
+  flex-direction: column; 
+}
+
+.name-and-star {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
 .hotel-names {
   font-size: 21px;
   line-height: 1.24;
@@ -791,50 +852,33 @@ ul.sorting a:active {
   color: #cacaca;
 }
 
-.rating {
+.hotel-star {
   display: flex;
-  width: 110px;
-  justify-content: center;
-  align-items: center;
-  height: 27px;
-  background-color: #f2f2f2;
-  color: #666666;
+  margin-left: auto;
 }
 
-.amara,
-.desert,
-.villas {
-  display: flex;
-}
-
-.amara-info,
-.desert-info,
-.villas-info {
-  display: flex;
-  flex-direction: column;
-  width: 893px;
-  height: 90px;
-  margin-left: 30px;
-  margin-bottom: 30px;
-}
-
-.name-and-star {
-  display: flex;
-  width: 893px;
-  justify-content: space-between;
-  
+.star {
+  background-image: url("../img/star.svg"); 
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 17px;
+  margin-left: 6px;
 }
 
 .type-and-price {
   display: flex;
-  width: 183px;
   justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.type-and-price p,
+.more-and-book p {
+  margin: 0; 
 }
 
 .more-and-book {
   display: flex;
-  width: 893px;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: baseline;
 }
 
@@ -851,6 +895,7 @@ ul.sorting a:active {
   height: 11px;
   background-color: #81b3d2;
   padding: 8px 18px;
+  margin-right: 6px;
 }
 
 .button-more:hover {
@@ -867,8 +912,6 @@ ul.sorting a:active {
   height: 11px;
   background-color: #766357;
   padding: 8px 17px;
-  margin-left: 6px;
-  margin-right: auto;
 }
 
 .button-book:hover {
@@ -880,28 +923,18 @@ ul.sorting a:active {
   color: #928a85;
 }
 
-.list-up,
-.list-down {
-  border-style: none;
-  background-color: #fefefe;
-  padding: 0;
+.rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 110px;
+  height: 27px;
+  background-color: #f2f2f2;
+  color: #666666;
+  margin-left: auto;
 }
 
-.list-up {
-  margin-right: 12px;
-}
 
-.star {
-  background-image: url("../img/star.svg"); 
-  background-repeat: no-repeat;
-  width: 18px;
-  height: 17px;
-  margin-left: 6px;
-}
-
-.hotel-star {
-  display: flex;  
-}
 
 /*Правки после проверки */
 
@@ -945,27 +978,3 @@ a.logo-academy:hover path {
 a.logo-academy:active path {
   fill: #bdbbbc;
 }
-
-/*Для второй страницы*/
-
-.list-up polygon,
-.list-down polyline {
-  fill: #cacaca;
-}
-
-.list-up polygon:hover,
-.list-down polyline:hover {
-  fill: #231f20;
-}
-
-.list-up polygon:active,
-.list-down polyline:active {
-  fill: #81b3d2;
-}
-
-
-
-
-
-
-
