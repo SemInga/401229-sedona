@@ -7,7 +7,8 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body class="main-container">
+  <body>
+    <div class="main-container">
     <header class="header">
       <a href="index.html" class="main-header-logo">
         <img src="img/logo_sedona.png" width="138" height="65" alt="Лого Седоны">
@@ -51,17 +52,31 @@
           </fieldset>
           <div class="last-block">
           <fieldset class="cost-per-day">
+            <div class="last-block-box">
             <legend>Стоимость в сутки (Р): </legend>
               <label for="start-price" class="visually-hidden">Минимальная цена</label>
               <input type="text" name="start-price" id="start-price" value="От 0">
               <label for="final-price" class="visually-hidden">Максимальная цена</label>
-              <input type="text" name="final-price" id="final-price" value="До 3000" class="final-price"><br>
-              <label for="prices" class="visually-hidden">Диапазон цен</label>
-            <div class="filter-button">
-              <img src="img/filter_button.svg">
+              <input type="text" name="final-price" id="final-price" value="До 3000" class="final-price">
             </div>
-            <div class="filter-button">
-              <img src="img/filter_button.svg">
+              <label for="prices" class="visually-hidden">Диапазон цен</label>
+            <div class="filter-buttons">
+              <div class="filter-button">
+                <img src="img/filter_button.svg" width="20" height="22">
+              </div>
+              <div class="filter-line">
+                <svg  width="232" height="22" >
+                  <line x1="0" y1="10" x2="232" y2="10" />
+                </svg>
+              </div>
+              <div class="filter-button">
+                <img src="img/filter_button.svg" width="20" height="22">
+              </div>
+              <div class="after-filter-line">
+                <svg  width="45" height="22">
+                  <line x1="0" y1="10" x2="45" y2="10" />
+                </svg>
+              </div>
             </div>
           </fieldset>
           <label for="search-results" class="visually-hidden">Показать варианты </label>
@@ -106,7 +121,9 @@
           <div class="amara-info">
             <div class="name-and-star">
               <a href="#" class="hotel-names">Amara resort &amp; spa</a>
-              <span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
+              <div class="hotel-star">
+                <span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
+              </div>
             </div>
             <div class="type-and-price">
               <p>Гостиница</p>
@@ -125,7 +142,9 @@
           <div class="desert-info">
             <div class="name-and-star">
               <a href="#" class="hotel-names">Desert Quail Inn</a>
-              <span class="star"></span><span class="star"></span><span class="star"></span>
+              <div class="hotel-star">
+                <span class="star"></span><span class="star"></span><span class="star"></span>
+              </div>
             </div>
             <div class="type-and-price">
               <p>Мотель</p>
@@ -144,7 +163,9 @@
           <div class="villas-info">
             <div class="name-and-star">
               <a href="#" class="hotel-names">Villas at Poco Diablo</a>
-              <span class="star"></span><span class="star"></span>
+              <div class="hotel-star">
+                <span class="star"></span><span class="star"></span>
+              </div>
             </div>
             <div class="type-and-price">
               <p>Апартаменты</p>
@@ -160,7 +181,7 @@
       </section>
       </div>
     </main>
-    <footer class="footer">
+    <footer class="hotel-footer">
       <a href="#">#VisitSedona</a>
       <div class="footer-social">
       <a href="#" class="social-button">
@@ -186,5 +207,6 @@
         </a>
       </div>
     </footer>
+    </div>
   </body>
 </html>
