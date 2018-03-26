@@ -15,7 +15,7 @@
       </a>
       <nav class="main-navigation">
         <ul class="site-navigation">
-          <li><a href="#" class="active">Информация</a></li>
+          <li><a href="#">Информация</a></li>
           <li><a href="#">Фото и видео</a></li>
           <li><a href="#">Карта штата</a></li>
           <li><a href="#" class="active">Гостиницы</a></li>
@@ -52,12 +52,17 @@
           </fieldset>
           <div class="last-block">
             <fieldset class="cost-per-day">
-              <div class="last-block-box">
+              
               <legend>Стоимость в сутки (Р): </legend>
+              <div class="last-block-box">
+                <div class="start-price-block">
                 <label for="start-price" class="visually-hidden">Минимальная цена</label>
                 <input type="text" name="start-price" id="start-price" value="От 0">
-                <label for="final-price" class="visually-hidden">Максимальная цена</label>
+                </div>
+                <div class="price-block">
+                <label for="final-price" class="visually-hidden pro">Максимальная цена</label>
                 <input type="text" name="final-price" id="final-price" value="До 3000" class="final-price">
+                </div>
               </div>
               <label for="prices" class="visually-hidden">Диапазон цен</label>
               <div class="filter-buttons">
@@ -110,7 +115,6 @@
               </svg>
             </button>
         </div>
-        
       </section>
       <section class="hotels">
         <h2 class="visually-hidden">Список выбранных отелей</h2>
@@ -125,7 +129,7 @@
               </div>
             </div>
             <div class="type-and-price">
-              <p>Гостиница</p>
+              <p class="type-one">Гостиница</p>
               <p>От 4000 р.</p>
             </div>
             <div class="more-and-book">
@@ -146,7 +150,7 @@
               </div>
             </div>
             <div class="type-and-price">
-              <p>Мотель</p>
+              <p class="type-two">Мотель</p>
               <p>От 3000 р.</p>
             </div>
             <div class="more-and-book">
@@ -167,7 +171,7 @@
               </div>
             </div>
             <div class="type-and-price">
-              <p>Апартаменты</p>
+              <p class="type-three">Апартаменты</p>
               <p>От 2000 р.</p>
             </div>
             <div class="more-and-book">
