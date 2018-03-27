@@ -137,8 +137,7 @@ a.active {
 }
 
 .container-block {
-  display: flex;
-  flex: 1;
+  display: flex;  
 }
 
 .container-block:first-of-type {
@@ -148,16 +147,15 @@ a.active {
 .real-city {
   background-image: url(../img/first_adv.jpg);
   background-repeat: no-repeat;
-  width: 800px;
-  height: 256px;
   background-size: cover; 
+  flex: 1;
 }
 
 .devil-bridge {
   background-image: url(../img/second_adv.jpg);
   background-repeat: no-repeat;
-  width: 800px;
-  height: 256px;
+  background-size: cover; 
+  flex: 1;
 }
 
 .adv-item-first {
@@ -178,16 +176,14 @@ a.active {
 }
 
 
-.feature-item,
-.adv-item,
-.adv-item-first,
-.adv-item-second {
+.feature-item {
   text-align: center;
 }
 
 .adv-item,
 .adv-item-first,
 .adv-item-second {
+  text-align: center;
   width: 400px;
 }
 
@@ -197,6 +193,13 @@ ul.features {
   align-items: center;
   margin-bottom: 70px;
   padding: 0;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
 }
 
 .features svg {
@@ -213,10 +216,8 @@ ul.features {
   margin-left: auto;
 }
 
-
 .adv-items {
-  display: flex; 
-  height: 256px; /*Говорят, что не нужно задавть высоту флекс-элементам и контейнеру. Но без этого не получается у меня. Это прям ошибка?*/
+  display: flex;
   background-color: #eeeeee;
   margin: 0;
   margin-bottom: 50px;
@@ -228,7 +229,6 @@ ul.features {
   flex-direction: column;
   justify-content:center;
   align-items: center; 
-  
   padding-top: 30px;
   padding-bottom: 64px;
 }
@@ -292,8 +292,8 @@ ul.features {
 
 button.search {
   position: relative;
-  width: 568px;
-  height: 86px;
+  /*width: 568px;
+  height: 86px;*/
   font-size: 21px;
   line-height: 1.24;
   font-weight: bold;
@@ -301,6 +301,7 @@ button.search {
   color: #ffffff;
   text-transform: uppercase;
   border-style: none;
+  padding: 30px 139px;
 }
 
 button.search:hover {
@@ -319,7 +320,6 @@ button.search:active {
   justify-content:space-between;
   align-items: stretch;
   position: absolute;
-  height: 285px; /*опять высота, убрать ее?*/
   background-color: #ffffff;
   padding: 55px;
 }
@@ -348,12 +348,9 @@ button.search:active {
   text-transform: uppercase;
 }
 
-
 .date input[type="text"] {
-  width: 324px;
-  height: 38px;
   border-style: none;
-  padding: 0 9px 0 13px;
+  padding: 14px 179px 14px 12px;
 }
 
 div.date:first-of-type {
@@ -429,8 +426,6 @@ button.minus {
 }
 
 .short-search input[type="submit"] {
-  width: 458px;
-  height: 58px;
   background-color: #81b3d2;
   font-size: 21px;
   line-height: 26px;
@@ -438,6 +433,7 @@ button.minus {
   text-transform: uppercase;
   color: #ffffff;
   border-style: none;
+  padding: 17px 196px;
 }
 
 .short-search input[type="submit"]:hover {
@@ -645,23 +641,27 @@ p.accommodation-box {
 .last-block-box {
   display: flex;
   justify-content: flex-end;
+  position: relative;
 }
 
 .start-price-block input[type="text"] {
-  /*margin-right: -8px;*/
   border-right-style: none;
+  padding-right: 10px;
 }
 
 .price-block input[type="text"] {
-  /*margin-left: -4px;*/
   border-left-style: none;
 }
 
-.start-price-block::after {
-  content: "|";
-  color: #ffffff;
+.last-block-box::after {
+  content: "";
+  display: block;
   width: 2px;
   height: 22px;
+  background: #ffffff;
+  position: absolute;
+  right: 50%;
+  top: 5px;
 }
 
 .infrastructure {
@@ -681,11 +681,12 @@ p.accommodation-box {
 .infrastructure-checkbox input[type="checkbox"] + .checkbox-indicator,
 .accommodation-checkbox input[type="checkbox"] + .checkbox-indicator {
   position: absolute;
-  width: 19px;
-  height: 19px;
-  border: 2px solid #ffffff;
+  width: 23px;
+  height: 23px;
+  background: url("../img/checkbox_off.svg");
   top: 0;
   left: 0;
+  
 }
 
 .infrastructure-checkbox input[type="checkbox"]:focus + .checkbox-indicator,
@@ -693,6 +694,20 @@ p.accommodation-box {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
 }
+
+.infrastructure-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before,
+.accommodation-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 27px;
+  height: 23px;
+  background: url("../img/checkbox_on.svg");
+}
+
+
+
+/*tеще должно быть состояние                                           disabled*/
 
 
 .filter-buttons {
@@ -719,8 +734,9 @@ p.accommodation-box {
 
 /*ФОРМА ЗАКОНЧИЛАСЬ */
 
-.container-results {
-  margin: 0 73px;
+.results,
+.hotel {
+  padding: 0 73px;
 }
 
 /*Первая строка                */
@@ -728,7 +744,8 @@ p.accommodation-box {
 .results {
   display: flex;
   align-items: baseline;
-  margin-bottom: 64px;
+  margin-bottom: 29px;
+  margin-top: 31px;
 }
 
 .quantity-result {
@@ -850,11 +867,13 @@ ul.sorting a:active {
 .hotel {
   display: flex;
   justify-content: flex-start;
-  margin-bottom: 61px;
+  border-bottom: 1px solid #e5e5e5;
+  padding-top: 30px;
+  padding-bottom: 27px;
 }
 
-.hotel:last-of-type {
-  margin-bottom: 31px; 
+.hotel:first-of-type {
+  border-top: 1px solid #e5e5e5;
 }
 
 .hotel-photo {
@@ -876,7 +895,7 @@ ul.sorting a:active {
 
 .hotel-names {
   font-size: 21px;
-  line-height: 1.24;
+  line-height: 1;
   font-weight: bold;
   color: #000000;
 }
@@ -937,7 +956,7 @@ p.type-three {
   align-items: center;
   font-weight: bold;
   color: #ffffff;
-  padding: 7px 16px 7px 16px;
+  padding: 4px 13px 4px 13px;
 }
 
 .button-more {
@@ -974,7 +993,7 @@ p.type-three {
   align-items: center;
   background-color: #f2f2f2;
   color: #666666;
-  padding: 7px 16px 7px 16px;
+  padding: 4px 13px 4px 13px;
 }
 
 
