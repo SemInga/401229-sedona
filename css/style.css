@@ -26,8 +26,7 @@ a {
   width: 1200px;
   margin: 0 auto;
   box-shadow: 
-    0 0 20px 20px #e4e4e4,
-    0 0 0px 40px #ececec; 
+    0 0 20px 5px #dedede; 
 }
 
 .header {
@@ -290,10 +289,11 @@ ul.features {
   align-items: center;
 }
 
-button.search {
+.search-block {
   position: relative;
-  /*width: 568px;
-  height: 86px;*/
+}
+
+button.search {
   font-size: 21px;
   line-height: 1.24;
   font-weight: bold;
@@ -322,6 +322,8 @@ button.search:active {
   position: absolute;
   background-color: #ffffff;
   padding: 55px;
+  left: 0;
+  right: 0;
 }
 
 .short-search fieldset {
@@ -351,6 +353,7 @@ button.search:active {
 .date input[type="text"] {
   border-style: none;
   padding: 14px 179px 14px 12px;
+  margin-left: 21px;
 }
 
 div.date:first-of-type {
@@ -576,12 +579,6 @@ form.normal-search {
   margin: 0;
 }
 
-.last-block {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 .normal-search legend {
   font-size: 16px;
   line-height: 1.31;
@@ -623,34 +620,25 @@ p.accommodation-box {
   position: relative;
 }
 
+.last-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .cost-per-day {
   padding-left: 0;
   padding-right: 0;
-}
-
-.cost-per-day input[type="text"] {
-  background: transparent;
-  text-align: center;
-  color: #ffffff;
-  height: 28px;
-  border: 2px solid #ffffff;  
-  margin-bottom: 13px;
-  text-transform: uppercase;
 }
 
 .last-block-box {
   display: flex;
   justify-content: flex-end;
   position: relative;
-}
-
-.start-price-block input[type="text"] {
-  border-right-style: none;
-  padding-right: 10px;
-}
-
-.price-block input[type="text"] {
-  border-left-style: none;
+  max-width: 314px;
+  padding: 7px 0;
+  border: 2px solid #ffffff;
+  margin-bottom: 13px;
 }
 
 .last-block-box::after {
@@ -661,7 +649,23 @@ p.accommodation-box {
   background: #ffffff;
   position: absolute;
   right: 50%;
-  top: 5px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.last-block-box label {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 50%;
+}
+
+.last-block-box input[type="text"] {
+  width: 50%;
+  border-style: none;
+  background: transparent;
+  color: #ffffff;
+  padding-left: 10px;
 }
 
 .infrastructure {
@@ -686,6 +690,16 @@ p.accommodation-box {
   background: url("../img/checkbox_off.svg");
   top: 0;
   left: 0;
+}
+
+.infrastructure-checkbox input[type="checkbox"]:disabled + .checkbox-indicator,
+.accommodation-checkbox input[type="checkbox"]:disabled + .checkbox-indicator {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  background: url("../img/checkbox_off_dis.svg");
+  top: 0;
+  left: 0;
   
 }
 
@@ -703,12 +717,19 @@ p.accommodation-box {
   width: 27px;
   height: 23px;
   background: url("../img/checkbox_on.svg");
+  background-repeat: no-repeat;
 }
 
-
-
-/*tеще должно быть состояние                                           disabled*/
-
+.infrastructure-checkbox input[type="checkbox"]:checked:disabled + .checkbox-indicator::before,
+.accommodation-checkbox input[type="checkbox"]:checked:disabled + .checkbox-indicator::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 27px;
+  height: 23px;
+  background: url("../img/checkbox_on_dis.svg");
+  background-repeat: no-repeat;
+}
 
 .filter-buttons {
   display: flex;
