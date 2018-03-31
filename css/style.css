@@ -20,8 +20,6 @@ a {
   margin: -1px;
 }
 
-/*HEADER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-
 .main-container {
   width: 1200px;
   margin: 0 auto;
@@ -56,7 +54,7 @@ a {
   margin-right: auto;
 }
 
-.site-navigation li:nth-of-type(3) {
+.site-navigation li:nth-last-of-type(2) {      
   margin-left: auto;
 }
 
@@ -91,9 +89,6 @@ a.active {
   transform: translateX(-50%);
   z-index: 1;
 }
-/*HEADER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-
-
 
 .background-picture {
   background-image: url("../img/background_photo.jpg");
@@ -173,7 +168,6 @@ a.active {
   padding-top: 43px;
   padding-bottom: 62px;
 }
-
 
 .feature-item {
   text-align: center;
@@ -313,8 +307,6 @@ button.search:active {
   color: #928a85;
 }
 
-/*Форма поиска              */
-
 .short-search {
   display: flex;
   justify-content:space-between;
@@ -324,6 +316,23 @@ button.search:active {
   padding: 55px;
   left: 0;
   right: 0;
+  display: none;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+.short-search-open {
+  display: block;
+  animation-name: appear;
+  animation-duration: 2s;
+  position: absolute;
 }
 
 .short-search fieldset {
@@ -452,13 +461,6 @@ button.minus {
   color: #94b9d2;
 }
 
-
-/*Форма закончилась*/
-
-
-
-/*ФУТЕР             */
-
 .footer {
   display: flex;
   width: 100%;
@@ -470,7 +472,7 @@ button.minus {
   padding-left: 132px;
   padding-right: 101px;
   padding-bottom: 36px;
-  margin-top: -126px;
+  margin-top: -120px;                                 
   background-color: rgba(255, 255, 255, 0.9); 
 }
 
@@ -505,7 +507,7 @@ button.minus {
 a.social-button {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center;                           
 }
 
 .social-button {
@@ -546,14 +548,6 @@ a.logo-academy {
   height: 41px;
   margin-left: 8px;
 }
-
-
-
-
-/*ФУТЕР             */
-
-/*Вторая страница*/
-
 
 .hotels-container {
   width: 1200px;
@@ -703,7 +697,6 @@ p.accommodation-box {
   background: url("../img/checkbox_off_dis.svg");
   top: 0;
   left: 0;
-  
 }
 
 .infrastructure-checkbox input[type="checkbox"]:focus + .checkbox-indicator,
@@ -756,14 +749,10 @@ p.accommodation-box {
   margin-left: -2px;
 }
 
-/*ФОРМА ЗАКОНЧИЛАСЬ */
-
 .results,
 .hotel {
   padding: 0 73px;
 }
-
-/*Первая строка                */
 
 .results {
   display: flex;
@@ -793,8 +782,6 @@ p.accommodation-box {
   margin: 0;
   margin-right: 40px;
 }
-
-/*Список параметров сортировки*/
 
 ul.sorting {
   display: flex;
@@ -842,8 +829,6 @@ ul.sorting a:active {
   border: none;
 }
 
-/*Список параметров сортировки*/
-
 .buttons {
   display: flex;
   justify-content: space-between;
@@ -879,9 +864,6 @@ ul.sorting a:active {
 .list-down polyline:active {
   fill: #81b3d2;
 }
-
-/*Первая строка                */
-
 
 .hotels {
   display: flex;
@@ -1020,11 +1002,6 @@ p.type-three {
   padding: 4px 13px 4px 13px;
 }
 
-
-
-/*Правки после проверки */
-
-
 button.calendar svg {
   fill: #cacaca;
 }
@@ -1065,3 +1042,8 @@ a.logo-academy:active path {
   fill: #bdbbbc;
 }
 
+.map {
+  background-image: url("../img/map.jpg");
+  width: 1200px;
+  height: 593px;
+}
