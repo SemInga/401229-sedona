@@ -409,6 +409,7 @@ div.date:nth-of-type(2) {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 div.date {
@@ -419,7 +420,9 @@ button.calendar {
   border-style: none;
   position: absolute;
   padding: 0;
-  right: 64px;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
   vertical-align: middle;
   background-color: #f2f2f2;
 }
