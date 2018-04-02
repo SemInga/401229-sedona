@@ -665,6 +665,7 @@ form.normal-search {
 
 .cost-per-day legend {
   margin-bottom: 6px; 
+  margin-left: 5px;
 }
 
 .normal-search label {
@@ -682,6 +683,7 @@ form.normal-search {
   align-self: center;
   background: transparent;
   margin-bottom: 6px;
+  margin-right: 5px;
 }
 
 .normal-search input[type="submit"]:hover {
@@ -730,7 +732,7 @@ p.accommodation-box {
   height: 22px;
   background: #ffffff;
   position: absolute;
-  right: 50%;
+  right: 48%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -744,6 +746,16 @@ p.accommodation-box {
   justify-content: flex-end;
   align-items: center;
   width: 50%;
+  
+}
+
+.last-block-box label:first-of-type {
+  margin-right: 10px;
+  margin-left: 13px;
+}
+
+.last-block-box label:last-of-type {
+  margin-right: 15px;
 }
 
 .last-block-box input[type="text"] {
@@ -751,7 +763,7 @@ p.accommodation-box {
   border-style: none;
   background: transparent;
   color: #ffffff;
-  padding-left: 7px;
+  margin-left: 5px;
 }
 
 .infrastructure {
@@ -823,7 +835,7 @@ p.accommodation-box {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .filter-line line {

@@ -4,7 +4,7 @@ var arrivalDate = document.querySelector(".arr-date");
 var departureDate = document.querySelector(".dep-date");
 var amountAdults = document.querySelector(".ad-am");
 var amountChildren = document.querySelector(".ch-am");
-  
+ 
 searchButton.addEventListener("click", function (evt) {
   evt.preventDefault();
   shortSearch.classList.toggle("short-search-open");
